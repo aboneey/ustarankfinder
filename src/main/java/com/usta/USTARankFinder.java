@@ -40,13 +40,13 @@ public class USTARankFinder {
 
     public static Map<String, Integer> getLatestRanksFromWeb(String rankText, int version) {
 
-        System.setProperty("webdriver.chrome.driver", "E:\\chromed\\chromedriver.exe");
-
         // System.setProperty("webdriver.chrome.driver",
-        // "/usr/bin/chromedriver");
+        // "E:\\chromed\\chromedriver.exe");
+
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions chromeOptions = new ChromeOptions();
-        // chromeOptions.addArguments("--headless");
-        // chromeOptions.addArguments("--no-sandbox");
+        chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--no-sandbox");
 
         WebDriver driver = new ChromeDriver(chromeOptions);
 
